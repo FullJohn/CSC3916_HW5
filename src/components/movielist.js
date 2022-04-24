@@ -7,6 +7,7 @@ import { Carousel } from 'react-bootstrap'
 import { Glyphicon } from 'react-bootstrap'
 import {LinkContainer} from 'react-router-bootstrap';
 
+
 class MovieList extends Component {
     constructor(props) {
         super(props);
@@ -33,7 +34,6 @@ class MovieList extends Component {
             if (!movieList) { // evaluates to true if currentMovie is null
                 return <div>Loading...</div>;
             }
-
             return (
                 <Carousel onSelect={this.handleSelect}>
                     {movieList.map((movie) =>
@@ -44,7 +44,7 @@ class MovieList extends Component {
                                 </LinkContainer>
                             </div>
                             <Carousel.Caption>
-                                <h3>{movie.title}</h3>
+                                <h3 className='Carousel-Text'>{movie.title}</h3>
                                 <Glyphicon glyph={'star'} /> {movie.avgRating} &nbsp;&nbsp; {movie.releaseDate}
                             </Carousel.Caption>
                         </Carousel.Item>)}

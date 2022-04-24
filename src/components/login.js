@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { submitLogin } from '../actions/authActions';
 import { connect } from 'react-redux';
 import { Col, Form, FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap';
-
+require('dotenv').config();
 class Login extends Component {
 
     constructor(props) {
@@ -18,6 +18,7 @@ class Login extends Component {
         };
     }
 
+    
     updateDetails(event){
         let updateDetails = Object.assign({}, this.state.details);
 
